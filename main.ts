@@ -6,7 +6,7 @@ input.onButtonPressed(Button.B, function () {
     music.setVolume(255)
 })
 basic.forever(function () {
-    if (input.magneticForce(Dimension.Strength) < 200) {
+    if (input.magneticForce(Dimension.Strength) < 195) {
         basic.showLeds(`
             . . . . .
             . . . . .
