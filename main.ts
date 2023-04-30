@@ -1,3 +1,11 @@
+radio.onReceivedNumber(function (receivedNumber) {
+    if (receivedNumber == 1) {
+        music.setVolume(0)
+    }
+    if (receivedNumber == 3) {
+        music.setVolume(255)
+    }
+})
 input.onButtonPressed(Button.A, function () {
     music.setVolume(255)
 })
@@ -8,7 +16,9 @@ input.onButtonPressed(Button.B, function () {
     music.setVolume(0)
 })
 basic.forever(function () {
+    radio.setGroup(69)
     if (input.magneticForce(Dimension.Strength) < 195) {
+        radio.sendNumber(1)
         basic.showLeds(`
             . . . . .
             . . . . .
