@@ -1,9 +1,11 @@
 input.onButtonPressed(Button.A, function () {
-    music.setVolume(0)
+    music.setVolume(255)
+})
+input.onButtonPressed(Button.AB, function () {
     basic.showNumber(input.magneticForce(Dimension.Strength))
 })
 input.onButtonPressed(Button.B, function () {
-    music.setVolume(255)
+    music.setVolume(0)
 })
 basic.forever(function () {
     if (input.magneticForce(Dimension.Strength) < 195) {
