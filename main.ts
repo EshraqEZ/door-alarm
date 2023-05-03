@@ -1,8 +1,8 @@
 radio.onReceivedNumber(function (receivedNumber) {
-    if (receivedNumber == 2) {
+    if (receivedNumber == 3) {
         music.setVolume(0)
     }
-    if (receivedNumber == 3) {
+    if (receivedNumber == 2) {
         music.setVolume(255)
     }
 })
@@ -44,6 +44,7 @@ basic.forever(function () {
             `)
         music.playTone(330, music.beat(BeatFraction.Whole))
     } else {
+        radio.sendNumber(0)
         basic.showLeds(`
             . . . . .
             . . . . .
